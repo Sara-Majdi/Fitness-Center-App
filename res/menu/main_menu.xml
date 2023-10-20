@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/classDetails_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Class Details" />
+        <item
+            android:id="@+id/notifications_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/trainers_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Trainers" />
+        <item
+            android:id="@+id/aboutUs_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="About Us" />
+        <item
+            android:id="@+id/history_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="History" />
+    </group>
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logout_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Logout" />
+    </group>
+</menu>
