@@ -4,6 +4,7 @@ public class Account {
     private User user;
     private String username;
     private String password;
+    private String email;
     private String status;
     private String registerDate;
     private String role;
@@ -13,6 +14,7 @@ public class Account {
         this.user = new User();
         this.username = "";
         this.password = "";
+        this.email = "";
         this.status = "";
         this.registerDate = "";
         this.role = "";
@@ -30,6 +32,7 @@ public class Account {
     public String getPassword(){
         return this.password;
     }
+    public String getEmail() {return this.email;}
 
     public String getStatus(){
         return this.status;
@@ -55,6 +58,7 @@ public class Account {
     public void setPassword(String password){
         this.password = password;
     }
+    public void setEmail(String email) {this.email = email;}
 
     public void setStatus (String status){
         this.status = status;
