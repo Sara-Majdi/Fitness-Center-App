@@ -1,5 +1,10 @@
 package com.example.testing;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
+
 public class Account {
     private User user;
     private String username;
@@ -19,6 +24,7 @@ public class Account {
         this.registerDate = "";
         this.role = "";
     }
+
 
     //Getters
     public User getUserDetails(){
@@ -71,4 +77,22 @@ public class Account {
     public void setRole(String role){
         this.role = role;
     }
+
+    //Other functions
+    public boolean login(DatabaseManager databaseManager) {
+        SQLiteDatabase db = databaseManager.getReadableDatabase();
+        String sql = "SELECT * FROM Accounts WHERE username = ? AND password = ?";
+
+        SQLiteStatement statement = db.compileStatement(sql);
+        statement.bindString(1, username);
+        statement.bindString(2, password);
+
+        long count = statement.simpleQueryForLong();
+
+        statement.close();
+        db.close();
+
+        return count > 0;
+    }
+
 }
