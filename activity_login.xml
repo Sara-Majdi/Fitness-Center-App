@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/loginPage"
+    tools:context=".Login" >
+
+    <Button
+        android:id="@+id/clearLoginBtn"
+        android:layout_width="125dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#3F51B5"
+        android:onClick="registerBtnOnClick"
+        android:text="Clear All"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/usernameTextField"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/usernameTextField"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextField" />
+
+    <EditText
+        android:id="@+id/usernameTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="125dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#FF5722"
+        android:onClick="loginBtnOnClick"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTextField"
+        app:layout_constraintStart_toStartOf="@+id/passwordTextField"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextField"
+        app:toggleCheckedStateOnClick="false" />
+
+    <Button
+        android:id="@+id/goToRegisterBtn"
+        android:layout_width="123dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#009688"
+        android:onClick="goToRegisterBtnOnClick"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@+id/clearLoginBtn"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="@+id/clearLoginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearLoginBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

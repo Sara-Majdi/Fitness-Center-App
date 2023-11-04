@@ -5,15 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 
 public class Login extends AppCompatActivity {
 
@@ -59,7 +54,7 @@ public class Login extends AppCompatActivity {
 
                 if (account.login(dbManager)){
                     dbManager.close();
-                    Intent i = new Intent(Login.this, HomePage.class);
+                    Intent i = new Intent(Login.this, NavigationPage.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong username or password!", Toast.LENGTH_SHORT).show();

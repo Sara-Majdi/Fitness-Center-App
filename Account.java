@@ -80,19 +80,29 @@ public class Account {
 
     //Other functions
     public boolean login(DatabaseManager databaseManager) {
-        SQLiteDatabase db = databaseManager.getReadableDatabase();
-        String sql = "SELECT * FROM Accounts WHERE username = ? AND password = ?";
+        SQLiteDatabase db = null;
+        SQLiteStatement statement = null;
 
-        SQLiteStatement statement = db.compileStatement(sql);
-        statement.bindString(1, username);
-        statement.bindString(2, password);
-
-        long count = statement.simpleQueryForLong();
-
-        statement.close();
-        db.close();
-
-        return count > 0;
+        try {
+            db = databaseManager.getReadableDatabase();
+            String sql = "SELECT * FROM Accounts WHERE username = ? AND password = ?";
+            statement = db.compileStatement(sql);
+            statement.bindString(1, username);
+            statement.bindString(2, password);
+            long count = statement.simpleQueryForLong();
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
     }
+
 
 }

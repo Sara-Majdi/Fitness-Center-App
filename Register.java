@@ -108,15 +108,6 @@ public class Register extends AppCompatActivity {
                 for (int i=0; i<usernames.size(); i++){
                     Log.i("DATABASE_TAG", "Username: " + usernames.get(i));
                 }
-                /*
-                Cursor cursor = dbManager.fetchAccountTable();
-
-                if (cursor.moveToFirst()){
-                    do{
-                        String username = cursor.getString(0);
-                        Log.i("DATABASE_TAG", "Username: " + username);
-                    } while (cursor.moveToNext());
-                } */
 
                 Intent i = new Intent(Register.this, Login.class);
                 startActivity(i);

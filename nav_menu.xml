@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group
+        android:checkableBehavior="single"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <item
+            android:id="@+id/homeSideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/classDetailsSideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_groups_2_24"
+            android:title="Class Details" />
+        <item
+            android:id="@+id/announcementSideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_chat_bubble_24"
+            android:title="Announcement" />
+        <item
+            android:id="@+id/trainersSideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_emoji_people_24"
+            android:title="Trainers" />
+
+        <item
+            android:id="@+id/historySideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_history_24"
+            android:title="History" />
+    </group>
+
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="Communication"
+        android:checkableBehavior="single">
+
+        <item
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_question_answer_24"
+            android:title="About Us" />
+    </group>
+
+    <item
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/logoutSideNav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/baseline_reply_24"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
