@@ -1,28 +1,33 @@
 package com.example.testing;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
     private User user;
     private String username;
     private String password;
-    private String email;
     private String status;
     private String registerDate;
     private String role;
+    private int accountDBID;
+    private boolean hasProfile;
 
     //Constructor
     public Account() {
         this.user = new User();
         this.username = "";
         this.password = "";
-        this.email = "";
         this.status = "";
         this.registerDate = "";
         this.role = "";
+        this.accountDBID = 0;
+        this.hasProfile = false;
     }
 
 
@@ -38,7 +43,6 @@ public class Account {
     public String getPassword(){
         return this.password;
     }
-    public String getEmail() {return this.email;}
 
     public String getStatus(){
         return this.status;
@@ -52,6 +56,11 @@ public class Account {
         return this.role;
     }
 
+    public int getAccountDBID() {return this.accountDBID;}
+
+    public boolean isHavingProfile() {return this.hasProfile;}
+
+
     //Setters
     public void setUser(User user){
         this.user = user;
@@ -64,8 +73,6 @@ public class Account {
     public void setPassword(String password){
         this.password = password;
     }
-    public void setEmail(String email) {this.email = email;}
-
     public void setStatus (String status){
         this.status = status;
     }
@@ -76,6 +83,28 @@ public class Account {
 
     public void setRole(String role){
         this.role = role;
+    }
+
+    public void setProfile(DatabaseManager dbmanager) {
+        if (this.user.setAllDetailsFromDB(dbmanager, this.accountDBID)){
+            this.hasProfile = true;
+        }
+    }
+
+    public void setAccountDBID(DatabaseManager dbManager){
+        SQLiteDatabase db = dbManager.getReadableDatabase();
+
+        try {
+            String usernameQuery = "SELECT account_DBID FROM Accounts WHERE username = ?";
+            Cursor cursor = db.rawQuery(usernameQuery, new String[]{this.username});
+
+            if (cursor.moveToFirst()) {
+                this.accountDBID = cursor.getInt(0);
+            }
+            cursor.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     //Other functions
@@ -103,6 +132,5 @@ public class Account {
             }
         }
     }
-
 
 }

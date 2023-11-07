@@ -36,6 +36,7 @@ public class Login extends AppCompatActivity {
         registerBtn = findViewById(R.id.goToRegisterBtn);
         clearAllBtn = findViewById(R.id.clearLoginBtn);
 
+        account = new Account();
         setupButtonListeners();
     }
 
@@ -47,14 +48,15 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "All fields are mandatory!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                account = new Account();
 
                 account.setUsername(usernameTextField.getText().toString().trim());
                 account.setPassword(passwordTextField.getText().toString());
 
                 if (account.login(dbManager)){
+                    account.setAccountDBID(dbManager);
                     dbManager.close();
                     Intent i = new Intent(Login.this, NavigationPage.class);
+                    i.putExtra("account", account);
                     startActivity(i);
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong username or password!", Toast.LENGTH_SHORT).show();
