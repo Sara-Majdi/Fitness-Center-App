@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="371dp"
+            android:layout_height="284dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/bmi_adult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="368dp"
+            android:layout_height="299dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Body Mass Index (BMI) is a vital tool in assessing fitness, indicating the balance between weight and height. Maintaining a healthy BMI promotes overall fitness, reducing the risk of health issues, fostering well-being, and ensuring a sustainable, active lifestyle. Strive for a balanced BMI for optimal health and fitness goals.\n
+\nBecome more healthy with SH FITNESS!"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <!-- Add other views and constraints as needed -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
