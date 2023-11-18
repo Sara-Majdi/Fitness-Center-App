@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Register">
+
+    <EditText
+        android:id="@+id/passwordRegisterTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/usernameRegisterTextField"
+        app:layout_constraintStart_toStartOf="@+id/usernameRegisterTextField"
+        app:layout_constraintTop_toBottomOf="@+id/usernameRegisterTextField" />
+
+    <EditText
+        android:id="@+id/passwordRegisterTextField2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/passwordRegisterTextField"
+        app:layout_constraintStart_toStartOf="@+id/passwordRegisterTextField"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegisterTextField" />
+
+    <EditText
+        android:id="@+id/usernameRegisterTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/roleSpinner"
+        style="@style/SpinnerStyle"
+        android:layout_width="210dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordRegisterTextField2"
+        app:layout_constraintStart_toStartOf="@+id/passwordRegisterTextField2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegisterTextField2" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="130dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF5722"
+        android:onClick="registerBtnOnClick"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/roleSpinner"
+        app:layout_constraintStart_toStartOf="@+id/roleSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/roleSpinner" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="130dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3F51B5"
+        android:onClick="registerBtnOnClick"
+        android:text="Clear All"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/registerBtn"
+        app:layout_constraintStart_toStartOf="@+id/registerBtn"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="126dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#009688"
+        android:onClick="backBtnOnClick"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="@+id/clearBtn"
+        app:layout_constraintStart_toStartOf="@+id/clearBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="8dp"
+        android:text="Join As"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/roleSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/roleSpinner"
+        app:layout_constraintStart_toStartOf="@+id/roleSpinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
