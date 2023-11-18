@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F8F8F"
+    tools:context=".TrainerUpdateAchievements">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="130dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Achievements"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editAchievementsSpace"
+        android:layout_width="369dp"
+        android:layout_height="473dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Your achievements"
+        android:inputType="textMultiLine"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#F8F8F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="118dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAchievementsSpace" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

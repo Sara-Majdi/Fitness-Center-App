@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/announcementTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Class Description"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/announcementDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcementTitle"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Trainer Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcementDescription"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Time: 1200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/timeDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcementDescription"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@+id/time"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="-"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/announcementDescription"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@+id/timeDash"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="1300"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/endTime"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Duration: 60 mins"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/duration"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Date: 12-12-2023"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:text="Venue: Room Aristotle"
+            android:textSize="16sp" />
+        
+    </RelativeLayout>
+
+        
+
+</androidx.cardview.widget.CardView>
